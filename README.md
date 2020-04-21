@@ -132,7 +132,7 @@ What Casbin does NOT do:
 ## Installation
 
 ```
-go get github.com/casbin/casbin
+go get github.com/hexuejian/casbin
 ```
 
 ## Documentation
