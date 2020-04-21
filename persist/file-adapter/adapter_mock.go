@@ -21,8 +21,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/casbin/casbin/model"
-	"github.com/casbin/casbin/persist"
+	"github.com/hexuejian/casbin/model"
+	"github.com/hexuejian/casbin/persist"
 )
 
 // AdapterMock is the file beegoormadapter for Casbin.

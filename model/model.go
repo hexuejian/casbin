@@ -18,9 +18,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/casbin/casbin/config"
-	"github.com/casbin/casbin/log"
-	"github.com/casbin/casbin/util"
+	"github.com/hexuejian/casbin/config"
+	"github.com/hexuejian/casbin/log"
+	"github.com/hexuejian/casbin/util"
 )
 
 // Model represents the whole access control model.

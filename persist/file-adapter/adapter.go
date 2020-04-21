@@ -21,9 +21,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/casbin/casbin/model"
-	"github.com/casbin/casbin/persist"
-	"github.com/casbin/casbin/util"
+	"github.com/hexuejian/casbin/model"
+	"github.com/hexuejian/casbin/persist"
+	"github.com/hexuejian/casbin/util"
 )
 
 // Adapter is the file beegoormadapter for Casbin.

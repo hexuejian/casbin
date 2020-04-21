@@ -1,11 +1,11 @@
 Casbin
 ====
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/casbin/casbin)](https://goreportcard.com/report/github.com/casbin/casbin)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hexuejian/casbin)](https://goreportcard.com/report/github.com/hexuejian/casbin)
 [![Build Status](https://travis-ci.org/casbin/casbin.svg?branch=master)](https://travis-ci.org/casbin/casbin)
 [![Coverage Status](https://coveralls.io/repos/github/casbin/casbin/badge.svg?branch=master)](https://coveralls.io/github/casbin/casbin?branch=master)
-[![Godoc](https://godoc.org/github.com/casbin/casbin?status.svg)](https://godoc.org/github.com/casbin/casbin)
-[![Release](https://img.shields.io/github/release/casbin/casbin.svg)](https://github.com/casbin/casbin/releases/latest)
+[![Godoc](https://godoc.org/github.com/hexuejian/casbin?status.svg)](https://godoc.org/github.com/hexuejian/casbin)
+[![Release](https://img.shields.io/github/release/casbin/casbin.svg)](https://github.com/hexuejian/casbin/releases/latest)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/casbin/lobby)
 [![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](http://www.patreon.com/yangluo)
 
@@ -17,9 +17,9 @@ Casbin is a powerful and efficient open-source access control library for Golang
 
 ## All the languages supported by Casbin:
 
-[![golang](https://casbin.org/docs/assets/langs/golang.png)](https://github.com/casbin/casbin) | [![java](https://casbin.org/docs/assets/langs/java.png)](https://github.com/casbin/jcasbin) | [![nodejs](https://casbin.org/docs/assets/langs/nodejs.png)](https://github.com/casbin/node-casbin) | [![php](https://casbin.org/docs/assets/langs/php.png)](https://github.com/php-casbin/php-casbin)
+[![golang](https://casbin.org/docs/assets/langs/golang.png)](https://github.com/hexuejian/casbin) | [![java](https://casbin.org/docs/assets/langs/java.png)](https://github.com/casbin/jcasbin) | [![nodejs](https://casbin.org/docs/assets/langs/nodejs.png)](https://github.com/casbin/node-casbin) | [![php](https://casbin.org/docs/assets/langs/php.png)](https://github.com/php-casbin/php-casbin)
 ----|----|----|----
-[Casbin](https://github.com/casbin/casbin) | [jCasbin](https://github.com/casbin/jcasbin) | [node-Casbin](https://github.com/casbin/node-casbin) | [PHP-Casbin](https://github.com/php-casbin/php-casbin)
+[Casbin](https://github.com/hexuejian/casbin) | [jCasbin](https://github.com/casbin/jcasbin) | [node-Casbin](https://github.com/casbin/node-casbin) | [PHP-Casbin](https://github.com/php-casbin/php-casbin)
 production-ready | production-ready | production-ready | production-ready
 
 ## Table of contents
@@ -185,8 +185,8 @@ See [Policy management APIs](#policy-management) for more usage.
 
 Casbin provides two sets of APIs to manage permissions:
 
-- [Management API](https://github.com/casbin/casbin/blob/master/management_api.go): the primitive API that provides full support for Casbin policy management. See [here](https://github.com/casbin/casbin/blob/master/management_api_test.go) for examples.
-- [RBAC API](https://github.com/casbin/casbin/blob/master/rbac_api.go): a more friendly API for RBAC. This API is a subset of Management API. The RBAC users could use this API to simplify the code. See [here](https://github.com/casbin/casbin/blob/master/rbac_api_test.go) for examples.
+- [Management API](https://github.com/hexuejian/casbin/blob/master/management_api.go): the primitive API that provides full support for Casbin policy management. See [here](https://github.com/hexuejian/casbin/blob/master/management_api_test.go) for examples.
+- [RBAC API](https://github.com/hexuejian/casbin/blob/master/rbac_api.go): a more friendly API for RBAC. This API is a subset of Management API. The RBAC users could use this API to simplify the code. See [here](https://github.com/hexuejian/casbin/blob/master/rbac_api_test.go) for examples.
 
 We also provide a web-based UI for model management and policy management:
 
@@ -201,7 +201,7 @@ In Casbin, the policy storage is implemented as an adapter (aka middleware for C
 Adapter | Type | Author | Description
 ----|------|----|----
 [File Adapter (built-in)](https://casbin.org/docs/en/policy-storage#file-adapter-built-in) | File | Casbin | Persistence for [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[Filtered File Adapter (built-in)](https://github.com/casbin/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | Persistence for [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
+[Filtered File Adapter (built-in)](https://github.com/hexuejian/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | Persistence for [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
 [Xorm Adapter](https://github.com/casbin/xorm-adapter) | ORM | Casbin | MySQL, PostgreSQL, TiDB, SQLite, SQL Server, Oracle are supported by [Xorm](https://github.com/go-xorm/xorm/)
 [Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
 [Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
@@ -233,7 +233,7 @@ For example, the following code snippet uses the built-in filtered file adapter 
 
 ```go
 import (
-    "github.com/casbin/casbin"
+    "github.com/hexuejian/casbin"
 )
 
 enforcer := casbin.NewEnforcer()
@@ -270,22 +270,22 @@ The role manager is used to manage the RBAC role hierarchy (user-role mapping) i
 
 Role manager | Author | Description
 ----|----|----
-[Default Role Manager (built-in)](https://github.com/casbin/casbin/blob/master/rbac/default-role-manager/role_manager.go) | Casbin | Supports role hierarchy stored in Casbin policy
+[Default Role Manager (built-in)](https://github.com/hexuejian/casbin/blob/master/rbac/default-role-manager/role_manager.go) | Casbin | Supports role hierarchy stored in Casbin policy
 [Session Role Manager](https://github.com/casbin/session-role-manager) | [EDOMO Systems](https://github.com/edomosystems) | Supports role hierarchy stored in Casbin policy, with time-range-based sessions
 [Okta Role Manager](https://github.com/casbin/okta-role-manager) | Casbin | Supports role hierarchy stored in [Okta](https://www.okta.com/)
 [Auth0 Role Manager](https://github.com/casbin/auth0-role-manager) | Casbin | Supports role hierarchy stored in [Auth0](https://auth0.com/)'s [Authorization Extension](https://auth0.com/docs/extensions/authorization-extension/v2)
 
-For developers: all role managers must implement the [RoleManager](https://github.com/casbin/casbin/blob/master/rbac/role_manager.go) interface. [Session Role Manager](https://github.com/casbin/session-role-manager) can be used as a reference implementation.
+For developers: all role managers must implement the [RoleManager](https://github.com/hexuejian/casbin/blob/master/rbac/role_manager.go) interface. [Session Role Manager](https://github.com/casbin/session-role-manager) can be used as a reference implementation.
 
 ## Multi-threading
 
-If you use Casbin in a multi-threading manner, you can use the synchronized wrapper of the Casbin enforcer: https://github.com/casbin/casbin/blob/master/enforcer_synced.go.
+If you use Casbin in a multi-threading manner, you can use the synchronized wrapper of the Casbin enforcer: https://github.com/hexuejian/casbin/blob/master/enforcer_synced.go.
 
 It also supports the ``AutoLoad`` feature, which means the Casbin enforcer will automatically load the latest policy rules from DB if it has changed. Call ``StartAutoLoadPolicy()`` to start automatically loading policy periodically and call ``StopAutoLoadPolicy()`` to stop it.
 
 ## Benchmarks
 
-The overhead of policy enforcement is benchmarked in [model_b_test.go](https://github.com/casbin/casbin/blob/master/model_b_test.go). The testbed is:
+The overhead of policy enforcement is benchmarked in [model_b_test.go](https://github.com/hexuejian/casbin/blob/master/model_b_test.go). The testbed is:
 
 ```
 Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz, 2601 Mhz, 4 Core(s), 8 Logical Processor(s)
@@ -311,21 +311,21 @@ Priority | 9 rules (2 users, 2 roles) | 0.016389 ms/op | 5.313 KB
 
 Model | Model file | Policy file
 ----|------|----
-ACL | [basic_model.conf](https://github.com/casbin/casbin/blob/master/examples/basic_model.conf) | [basic_policy.csv](https://github.com/casbin/casbin/blob/master/examples/basic_policy.csv)
-ACL with superuser | [basic_model_with_root.conf](https://github.com/casbin/casbin/blob/master/examples/basic_with_root_model.conf) | [basic_policy.csv](https://github.com/casbin/casbin/blob/master/examples/basic_policy.csv)
-ACL without users | [basic_model_without_users.conf](https://github.com/casbin/casbin/blob/master/examples/basic_without_users_model.conf) | [basic_policy_without_users.csv](https://github.com/casbin/casbin/blob/master/examples/basic_without_users_policy.csv)
-ACL without resources | [basic_model_without_resources.conf](https://github.com/casbin/casbin/blob/master/examples/basic_without_resources_model.conf) | [basic_policy_without_resources.csv](https://github.com/casbin/casbin/blob/master/examples/basic_without_resources_policy.csv)
-RBAC | [rbac_model.conf](https://github.com/casbin/casbin/blob/master/examples/rbac_model.conf)  | [rbac_policy.csv](https://github.com/casbin/casbin/blob/master/examples/rbac_policy.csv)
-RBAC with resource roles | [rbac_model_with_resource_roles.conf](https://github.com/casbin/casbin/blob/master/examples/rbac_with_resource_roles_model.conf)  | [rbac_policy_with_resource_roles.csv](https://github.com/casbin/casbin/blob/master/examples/rbac_with_resource_roles_policy.csv)
-RBAC with domains/tenants | [rbac_model_with_domains.conf](https://github.com/casbin/casbin/blob/master/examples/rbac_with_domains_model.conf)  | [rbac_policy_with_domains.csv](https://github.com/casbin/casbin/blob/master/examples/rbac_with_domains_policy.csv)
-ABAC | [abac_model.conf](https://github.com/casbin/casbin/blob/master/examples/abac_model.conf)  | N/A
-RESTful | [keymatch_model.conf](https://github.com/casbin/casbin/blob/master/examples/keymatch_model.conf)  | [keymatch_policy.csv](https://github.com/casbin/casbin/blob/master/examples/keymatch_policy.csv)
-Deny-override | [rbac_model_with_deny.conf](https://github.com/casbin/casbin/blob/master/examples/rbac_with_deny_model.conf)  | [rbac_policy_with_deny.csv](https://github.com/casbin/casbin/blob/master/examples/rbac_with_deny_policy.csv)
-Priority | [priority_model.conf](https://github.com/casbin/casbin/blob/master/examples/priority_model.conf)  | [priority_policy.csv](https://github.com/casbin/casbin/blob/master/examples/priority_policy.csv)
+ACL | [basic_model.conf](https://github.com/hexuejian/casbin/blob/master/examples/basic_model.conf) | [basic_policy.csv](https://github.com/hexuejian/casbin/blob/master/examples/basic_policy.csv)
+ACL with superuser | [basic_model_with_root.conf](https://github.com/hexuejian/casbin/blob/master/examples/basic_with_root_model.conf) | [basic_policy.csv](https://github.com/hexuejian/casbin/blob/master/examples/basic_policy.csv)
+ACL without users | [basic_model_without_users.conf](https://github.com/hexuejian/casbin/blob/master/examples/basic_without_users_model.conf) | [basic_policy_without_users.csv](https://github.com/hexuejian/casbin/blob/master/examples/basic_without_users_policy.csv)
+ACL without resources | [basic_model_without_resources.conf](https://github.com/hexuejian/casbin/blob/master/examples/basic_without_resources_model.conf) | [basic_policy_without_resources.csv](https://github.com/hexuejian/casbin/blob/master/examples/basic_without_resources_policy.csv)
+RBAC | [rbac_model.conf](https://github.com/hexuejian/casbin/blob/master/examples/rbac_model.conf)  | [rbac_policy.csv](https://github.com/hexuejian/casbin/blob/master/examples/rbac_policy.csv)
+RBAC with resource roles | [rbac_model_with_resource_roles.conf](https://github.com/hexuejian/casbin/blob/master/examples/rbac_with_resource_roles_model.conf)  | [rbac_policy_with_resource_roles.csv](https://github.com/hexuejian/casbin/blob/master/examples/rbac_with_resource_roles_policy.csv)
+RBAC with domains/tenants | [rbac_model_with_domains.conf](https://github.com/hexuejian/casbin/blob/master/examples/rbac_with_domains_model.conf)  | [rbac_policy_with_domains.csv](https://github.com/hexuejian/casbin/blob/master/examples/rbac_with_domains_policy.csv)
+ABAC | [abac_model.conf](https://github.com/hexuejian/casbin/blob/master/examples/abac_model.conf)  | N/A
+RESTful | [keymatch_model.conf](https://github.com/hexuejian/casbin/blob/master/examples/keymatch_model.conf)  | [keymatch_policy.csv](https://github.com/hexuejian/casbin/blob/master/examples/keymatch_policy.csv)
+Deny-override | [rbac_model_with_deny.conf](https://github.com/hexuejian/casbin/blob/master/examples/rbac_with_deny_model.conf)  | [rbac_policy_with_deny.csv](https://github.com/hexuejian/casbin/blob/master/examples/rbac_with_deny_policy.csv)
+Priority | [priority_model.conf](https://github.com/hexuejian/casbin/blob/master/examples/priority_model.conf)  | [priority_policy.csv](https://github.com/hexuejian/casbin/blob/master/examples/priority_policy.csv)
 
 ## How to use Casbin as a service?
 
-- [Casbin Server](https://github.com/casbin/casbin-server): The official ``Casbin as a Service`` solution based on [gRPC](https://grpc.io/), both Management API and RBAC API are provided.
+- [Casbin Server](https://github.com/hexuejian/casbin-server): The official ``Casbin as a Service`` solution based on [gRPC](https://grpc.io/), both Management API and RBAC API are provided.
 - [Go-Simple-API-Gateway](https://github.com/Soontao/go-simple-api-gateway): A simple API gateway written by golang, supports for authentication and authorization.
 - [middleware-acl](https://github.com/luk4z7/middleware-acl): RESTful access control middleware based on Casbin.
 
@@ -354,7 +354,7 @@ Priority | [priority_model.conf](https://github.com/casbin/casbin/blob/master/ex
 - [Intel RMD](https://github.com/intel/rmd): Intel's resource management daemon, via direct integration, see: [model](https://github.com/intel/rmd/blob/master/etc/rmd/acl/url/model.conf), [policy rules](https://github.com/intel/rmd/blob/master/etc/rmd/acl/url/policy.csv)
 - [VMware Dispatch](https://github.com/vmware/dispatch): A framework for deploying and managing serverless style applications, via direct integration, see: [model (in code)](https://github.com/vmware/dispatch/blob/master/pkg/identity-manager/handlers.go#L46-L55), [policy rules (in code)](https://github.com/vmware/dispatch/blob/master/pkg/identity-manager/handlers_test.go#L35-L45)
 - [Banzai Pipeline](https://github.com/banzaicloud/pipeline): [Banzai Cloud](https://github.com/banzaicloud)'s RESTful API to provision or reuse managed Kubernetes clusters in the cloud, via direct integration, see: [model (in code)](https://github.com/banzaicloud/pipeline/blob/master/auth/authz.go#L15-L30), [policy rules (in code)](https://github.com/banzaicloud/pipeline/blob/master/auth/authz.go#L84-L93)
-- [Docker](https://github.com/docker/docker): The world's leading software container platform, via plugin: [casbin-authz-plugin](https://github.com/casbin/casbin-authz-plugin) ([recommended by Docker](https://docs.docker.com/engine/extend/legacy_plugins/#authorization-plugins))
+- [Docker](https://github.com/docker/docker): The world's leading software container platform, via plugin: [casbin-authz-plugin](https://github.com/hexuejian/casbin-authz-plugin) ([recommended by Docker](https://docs.docker.com/engine/extend/legacy_plugins/#authorization-plugins))
 - [Gobis](https://github.com/orange-cloudfoundry/gobis): [Orange](https://github.com/orange-cloudfoundry)'s lightweight API Gateway written in go, via plugin: [casbin](https://github.com/orange-cloudfoundry/gobis-middlewares/tree/master/casbin), see [model (in code)](https://github.com/orange-cloudfoundry/gobis-middlewares/blob/master/casbin/model.go#L52-L65), [policy rules (from request)](https://github.com/orange-cloudfoundry/gobis-middlewares/blob/master/casbin/adapter.go#L46-L64)
 - [Skydive](https://github.com/skydive-project/skydive): An open source real-time network topology and protocols analyzer, via direct integration, see: [model (in code)](https://github.com/skydive-project/skydive/blob/master/config/config.go#L136-L140), [policy rules](https://github.com/skydive-project/skydive/blob/master/rbac/policy.csv)
 - [Zenpress](https://github.com/insionng/zenpress): A CMS system written in Golang, via direct integration, see: [model](https://github.com/insionng/zenpress/blob/master/content/config/rbac_model.conf), [policy rules (in Gorm)](https://github.com/insionng/zenpress/blob/master/model/user.go#L53-L77)
@@ -372,6 +372,6 @@ This project is licensed under the [Apache 2.0 license](LICENSE).
 ## Contact
 
 If you have any issues or feature requests, please contact us. PR is welcomed.
-- https://github.com/casbin/casbin/issues
+- https://github.com/hexuejian/casbin/issues
 - hsluoyz@gmail.com
 - Tencent QQ group: [546057381](//shang.qq.com/wpa/qunwpa?idkey=8ac8b91fc97ace3d383d0035f7aa06f7d670fd8e8d4837347354a31c18fac885)
