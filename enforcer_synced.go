@@ -15,11 +15,10 @@
 package casbin
 
 import (
+	"github.com/hexuejian/casbin/persist"
 	"log"
 	"sync"
 	"time"
-
-	"github.com/hexuejian/casbin/persist"
 )
 
 // SyncedEnforcer wraps Enforcer and provides synchronized access
